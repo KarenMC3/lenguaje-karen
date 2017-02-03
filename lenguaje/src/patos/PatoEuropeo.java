@@ -9,7 +9,14 @@ package patos;
  *
  * @author T-102
  */
-public class PatoEuropeo {
+public class PatoEuropeo extends Pato implements ComportamientoVolar {
     public static String color="negro";
+
+    @Override
+    public void volar() {
+        System.out.println("Soy pato europeo y vuelo");
         
+    }
+        
+   
 }

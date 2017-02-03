@@ -16,6 +16,11 @@ public class AplicacionPatos {
         System.out.println(PatoCanadiense.color);
         System.out.println(PatoEuropeo.color);
         System.out.println(PatoMexicano.color);
+        
+        pc1.comer();
+        pc1.volar();
+        
+       
     }
     
 }
