@@ -5,10 +5,12 @@
  */
 package excepciones2;
 
-
-public class ExtencionNoValidaException {
-
+/**
+ *
+ * @author 
+ */
+public class ExtencionNoValidaException extends Exception {
     public ExtencionNoValidaException(){
-        super ("Lo siento solo leo archivos txt");
+        super("LO SIENTO PERO SOLO LEO ARCHIVOS TXT");
     }
 }

@@ -7,23 +7,30 @@ package excepciones2;
 
 /**
  *
- * @author T-102
+ * @author 
  */
+
 import java.io.*;
 public class ValidacionArchivo {
-    public void validarExtencion(File file)throws ExtencionNoValidaExeption{
+    public static void validarExtencion(File file)throws ExtencionNoValidaException{
         //Preguntamos el nombre
         String nombre= file.getName();
-        //Como obtener la extencion
-        int indice1=    nombre.indexOf(".");
-        int indice2=    nombre.length();
-        String extencion=nombre.substring(indice1-1, indice2);
-        
-        if (extencion.equals("txt"))throw new ExtencionNoValidaException();
-        
-        
-       // throw new ExtencionNoValidaException();
-        
+    int indice1= nombre.indexOf(".");
+    int indice2= nombre.length();
+    String extencion=nombre.substring(indice1-1, indice2);
+    if(!extencion.endsWith("txt"))
+        throw new ExtencionNoValidaException();
     
+        
+  }
+    
+    public static void validarMayusculas(File file)throws MayusculasException {
+        String nombre=file.getName();
+        int indice1=  nombre.indexOf(".");
+        String name=nombre.substring(0,indice1);
+        
+        String mayusculas=name.toUpperCase();
+        
+        if(name.equals(mayusculas)) throw new MayusculasException();
     }
 }
