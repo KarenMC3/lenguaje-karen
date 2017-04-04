@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author T-102
+ * 
  */
 public class Nomina {
     private Trabajador worker;
